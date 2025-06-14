@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EM&ELLE Style Navbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        /* Hover dropdown support */
+        .navbar .dropdown:hover>.dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: black;
+            font-weight: bold;
+        }
+
+        .icon-links i {
+            font-size: 18px;
+            margin-left: 20px;
+            color: black;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        /* Extra styling for images */
+        .banner-image {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .img-fluid {
+            display: flex;
+            margin-right: 90px;
+        }
+
+        .img-fluid img {
+            width: 20%;
+        }
+
+        .img-fluid {
+            display: flex;
+            margin-right: 90px;
+        }
+
+        .images {
+            display: flex;
+        }
+
+        .image-fluid {
+            display: flex;
+            padding-left: 50px;
+        }
+
+        .video-banner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* Full screen height */
+            overflow: hidden;
+        }
+
+        .video-banner video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-overlay-container {
+            position: relative;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            z-index: 1;
+            padding: 0 15px;
+        }
+
+        .campaign-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .campaign-item img {
+            transition: transform .3s ease;
+        }
+
+        .campaign-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .campaign-caption {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            color: #000;
+            background: rgba(255, 255, 255, 0.8);
+            padding: .5rem 1rem;
+            font-size: .9rem;
+            border-radius: .25rem;
+        }
+
+        .campaign-caption h5 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .campaign-caption a {
+            font-size: .8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Global reset to avoid scrollbars */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Video container with slight height reduction */
+        .video-wrapper {
+            position: relative;
+            width: 100vw;
+            height: 95vh;
+            /* reduced from 100vh to avoid scroll */
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Center overlay content */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Responsive text */
+        .overlay h2 {
+            font-size: 2.5rem;
+            /* reduced from 3rem */
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .overlay .btn {
+            padding: 10px 24px;
+            font-size: 0.95rem;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .overlay .btn:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar margin-left">
+        TOP SELLERS STARTING AT $399
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <h1 class="text-left font-weight-bold" style="font-size: 30px;">EM&ELLE</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">LADIES</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Clothing</a>
+                        <a class="dropdown-item" href="#">Sport</a>
+                        <a class="dropdown-item" href="#">Accessories</a>
+                        <a class="dropdown-item" href="#">Swimwear & Beachwear</a>
+                        <a class="dropdown-item" href="#">Shoes</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">MEN</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Clothing</a>
+                        <a class="dropdown-item" href="#">Accessories</a>
+                        <a class="dropdown-item" href="#">Swimwear</a>
+                        <a class="dropdown-item" href="#">Sport</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">KIDS</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">NewBorn</a>
+                        <a class="dropdown-item" href="#">Baby</a>
+                        <a class="dropdown-item" href="#">Kids 2-8 Years</a>
+                        <a class="dropdown-item" href="#">Kids 9-14 Years</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">HOME</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Shop By Room</a>
+                        <a class="dropdown-item" href="#">Decorations</a>
+                        <a class="dropdown-item" href="#">Cooking & Dining</a>
+                        <a class="dropdown-item" href="#">Bedding & Blankets</a>
+                        <a class="dropdown-item" href="#">Bath & Shower</a>
+                        <a class="dropdown-item" href="#">Interior Textiles</a>
+                        <a class="dropdown-item" href="#">Storage</a>
+                        <a class="dropdown-item" href="#">Kids & Baby</a>
+                        <a class="dropdown-item" href="#">Sleep & Loungewear</a>
+                        <a class="dropdown-item" href="#">Room Fragrance</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="icon-links d-flex align-items-center">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <i class="far fa-heart"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Video with Centered Overlay Text -->
+    <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+            <source
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/WS32F-16x9-women-startpage-wk24.mp4"
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Centered Text Overlay -->
+        <div class="overlay">
+            <h2>LEISURELY LOOKS</h2>
+            <a href="#" class="btn">SHOP NOW</a>
+        </div>
+    </div>
+
+    <!-- Images -->
+    <div class="row no-gutters">
+        <div class="col-12 col-md-6">
+            <img src="https://image.hm.com/content/dam/global_campaigns/season_01/women/startpage-assets/wk23/1031b-4x5-wk23.jpg?imwidth=1366"
+                class="img-fluid w-100" alt="">
+        </div>
+        <div class="col-12 col-md-6">
+            <img src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/DS32E-4x5-women-startpage-wk24.jpg?imwidth=1366"
+                class="img-fluid w-100" alt="">
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <!-- Summer Small Titles -->
+    <div class="d-flex justify-content-between mx-3 mt-2">
+        <h6>SUMMER 2025</h6>
+        <h6>SHOP NOW</h6>
+        <h6>ENDLESS SUMMER</h6>
+    </div>
+
+
+
+    <!-- Bootstrap CDN (include this only once in your full project head section) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <div class="container mt-4">
+
+        <!-- NEW IN header only once -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">NEW IN</h5>
+            <a href="#" style="text-decoration: underline; color: black;">VIEW ALL</a>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="row">
+
+            <!-- Image 1 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/2e/36/2e368132f7db295b3bf6ab50ee321b8137ac6c8e.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/b8/00/b800306fc9567cb2d14575146c72641cf5f54209.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/df/45/df452aa7fb12179de0ee292a44600771c3521153.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/64/b7/64b7704050eb67935cbe8ba563a960f3c4159cb9.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 5 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/4e/f9/4ef98769aed0c5a486ac1d903d0f3ef4f56c3a8b.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 6 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/3b/89/3b89798f1872fe785deae5844f20d5910ef9d98c.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 7 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/dd/8c/dd8cfea2140d1c2287468a878c9542d7e22b073b.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 8 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/c3/f5/c3f5b35b93b64834d60a64e69cb2c129f7a0a0e2.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 9 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/4f/f4/4ff45141845e1f65d07ca0ef79779a30ab6a66cd.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 10 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/6a/9d/6a9d20aa9e9e1850777d2b70cb7d2f702091d688.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 11 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/85/92/85929f5f74e0435ea90a1a3148c236b8db35a4d6.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+            <!-- Image 12 -->
+            <div class="col-6 col-md-3 mb-3">
+                <img src="https://image.hm.com/assets/hm/8b/35/8b35fe9b4ea0b509c444eee377e536e162ed1666.jpg?imwidth=1536"
+                    class="img-fluid" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- First Image -->
+            <div class="col-md-6 col-12 mb-4 text-center">
+                <img src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/Dresses-CE-wk24.jpg?imwidth=1536"
+                    class="img-fluid" alt="Dresses">
+                <div class="mt-2">
+                    <h5 class="mb-1" style="font-size: 14px;">DRESSES</h5>
+                    <a href="#" style="text-decoration: none; color: black; font-size: 12px;">EXPLORE</a>
+                </div>
+            </div>
+
+            <!-- Second Image -->
+            <div class="col-md-6 col-12 mb-4 text-center">
+                <img src="https://image.hm.com/content/dam/global_campaigns/season_01/women/startpage-assets/wk23/Trousers-CE-wk23.jpg?imwidth=1536"
+                    class="img-fluid" alt="Jeans">
+                <div class="mt-2">
+                    <h5 class="mb-1" style="font-size: 14px;">LINEN DESTINATION</h5>
+                    <a href="#" style="text-decoration: none; color: black; font-size: 12px;">EXPLORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- First Image -->
+            <div class="col-md-6 col-12 mb-4 text-center">
+                <img src="https://image.hm.com/content/dam/global_campaigns/season_01/women/startpage-assets/wk23/Dresses-CE-wk23.jpg?imwidth=1536"
+                    class="img-fluid" alt="Dresses">
+                <div class="mt-2">
+                    <h5 class="mb-1" style="font-size: 14px;">DRESSES</h5>
+                    <a href="#" style="text-decoration: none; color: black; font-size: 12px;">EXPLORE</a>
+                </div>
+            </div>
+
+            <!-- Second Image -->
+            <div class="col-md-6 col-12 mb-4 text-center">
+                <img src="https://image.hm.com/content/dam/global_campaigns/season_01/women/startpage-assets/wk16/Jeans-2x3-5-CE-Women-wk16.jpg?imwidth=1536"
+                    class="img-fluid" alt="Jeans">
+                <div class="mt-2">
+                    <h5 class="mb-1" style="font-size: 14px;">JEANS AND TOPS</h5>
+                    <a href="#" style="text-decoration: none; color: black; font-size: 12px;">EXPLORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Shop -->
+            <div class="col-md-3 col-6 mb-4">
+                <h5 class="font-weight-bold">Shop</h5>
+                <p>LADIES</p>
+                <p>MEN</p>
+                <p>KIDS</p>
+                <p>HOME</p>
+                <p>MAGAZINE</p>
+            </div>
+
+            <!-- Corporate Info -->
+            <div class="col-md-3 col-6 mb-4">
+                <h5 class="font-weight-bold">Corporate Info</h5>
+                <p>CAREER AT EM&ELLE</p>
+                <p>ABOUT EM&ELLE GROUP</p>
+                <p>SUSTAINABILITY EM&ELLE GROUP</p>
+                <p>PRESS</p>
+                <p>INVESTOR RELATIONS</p>
+                <p>CORPORATE GOVERNANCE</p>
+            </div>
+
+            <!-- Help -->
+            <div class="col-md-3 col-6 mb-4">
+                <h5 class="font-weight-bold">Help</h5>
+                <p>CUSTOMER SERVICE</p>
+                <p>MY EM&ELLE</p>
+                <p>FIND A STORE</p>
+                <p>LEGAL & PRIVACY</p>
+                <p>CONTACT</p>
+                <p>SECURE SHOPPING</p>
+                <p>COOKIE NOTICE</p>
+                <p>COOKIE SETTINGS</p>
+            </div>
+
+            <!-- Sign up -->
+            <div class="col-md-3 col-12 mb-4">
+                <p>Sign up now and be the first to know about exclusive offers, latest fashion news
+                    & style
+                    tips!</p>
+                <a href="#" class="font-weight-bold text-decoration-none">READ MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="container mt-5 mb-4">
+        <div class="row align-items-center">
+            <!-- Logo -->
+            <div class="col-md-3 col-12 mb-3 text-center text-md-left">
+                <h2 style="font-family: 'Arial Black', sans-serif;">EM&ELLE</h2>
+            </div>
+
+            <!-- Region -->
+            <div class="col-md-3 col-12 mb-3 text-center text-md-left">
+                <strong>INDIA (Rs.)</strong> &nbsp;
+                <a href="#" class="text-decoration-none">CHANGE REGION</a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="col-md-3 col-12 mb-3 text-center text-md-left">
+                <p class="mb-0" style="font-size: 12px;">
+                    The content of this site is copyright-protected and is the property of EM&ELLE.
+                </p>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="col-md-3 col-12 mb-3 text-center text-md-right">
+                <a href="#" class="mx-1"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="mx-1"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="mx-1"><i class="fab fa-spotify"></i></a>
+                <a href="#" class="mx-1"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="mx-1"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="mx-1"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
